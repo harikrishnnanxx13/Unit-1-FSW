@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Front-End Development | BCA Workshop</title>
+  <meta name="description" content="A comprehensive 10-hour HTML & CSS workshop for BCA students. Learn web development from fundamentals to Bootstrap components." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== SIDEBAR NAV ========== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <i class="fa-solid fa-code"></i>
+        <span>WebDev BCA</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#hero" class="nav-item active" data-section="hero">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <div class="nav-section-label">HTML Modules</div>
+      <a href="#module1" class="nav-item" data-section="module1">
+        <span class="nav-num">01</span>
+        <span>HTML Basics</span>
+      </a>
+      <a href="#module2" class="nav-item" data-section="module2">
+        <span class="nav-num">02</span>
+        <span>Lists &amp; Links</span>
+      </a>
+      <a href="#module3" class="nav-item" data-section="module3">
+        <span class="nav-num">03</span>
+        <span>Images &amp; Tables</span>
+      </a>
+      <div class="nav-section-label">CSS Modules</div>
+      <a href="#module4" class="nav-item" data-section="module4">
+        <span class="nav-num">04</span>
+        <span>Intro to CSS</span>
+      </a>
+      <a href="#module5" class="nav-item" data-section="module5">
+        <span class="nav-num">05</span>
+        <span>Box Model &amp; Layout</span>
+      </a>
+      <a href="#module6" class="nav-item" data-section="module6">
+        <span class="nav-num">06</span>
+        <span>Typography</span>
+      </a>
+      <div class="nav-section-label">Bootstrap Modules</div>
+      <a href="#module7" class="nav-item" data-section="module7">
+        <span class="nav-num">07</span>
+        <span>Bootstrap Intro</span>
+      </a>
+      <a href="#module8" class="nav-item" data-section="module8">
+        <span class="nav-num">08</span>
+        <span>Content &amp; Forms</span>
+      </a>
+      <a href="#module9" class="nav-item" data-section="module9">
+        <span class="nav-num">09</span>
+        <span>Components</span>
+      </a>
+      <a href="#module10" class="nav-item" data-section="module10">
+        <span class="nav-num">10</span>
+        <span>Final Project</span>
+      </a>
+    </nav>
+    <div class="sidebar-progress">
+      <div class="progress-label">
+        <span>Your Progress</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile sidebar -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ========== TOP NAV ========== -->
+  <header class="topnav" id="topnav">
+    <button class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="topnav-title">Master Front-End Development</div>
+    <div class="topnav-actions" style="display: flex; gap: 10px; align-items: center;">
+      <button id="download-pdf-btn" title="Download Page as PDF" style="background: transparent; border: 1px solid var(--border); color: var(--text-color); border-radius: 8px; padding: 0.4rem 0.8rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; transition: all 0.2s;">
+        <i class="fa-solid fa-download"></i> PDF
+      </button>
+      <button class="btn-theme" id="themeToggle" title="Toggle theme">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-graduation-cap"></i>
+          BCA Workshop · 10 Modules · 10 Hours
+        </div>
+        <h1 class="hero-title">Master Front-End<br /><span class="gradient-text">Development</span></h1>
+        <p class="hero-subtitle">A comprehensive guide to HTML, CSS &amp; Bootstrap designed specifically for BCA students. Go from zero to building beautiful, responsive websites.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">10</span>
+            <span class="stat-label">Modules</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">10</span>
+            <span class="stat-label">Hours</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Code Examples</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#module1" class="btn-primary-hero">
+            Start Learning <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#module10" class="btn-secondary-hero">
+            View Project <i class="fa-solid fa-rocket"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="window-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="window-title">index.html</span>
+          </div>
+          <div class="code-content">
+            <div class="code-line"><span class="c-tag">&lt;!DOCTYPE html&gt;</span></div>
+            <div class="code-line"><span class="c-tag">&lt;html&gt;</span></div>
+            <div class="code-line pl-2"><span class="c-tag">&lt;head&gt;</span></div>
+            <div class="code-line pl-4"><span class="c-tag">&lt;title&gt;</span><span class="c-text">My Website</span><span class="c-tag">&lt;/title&gt;</span></div>
+            <div class="code-line pl-2"><span class="c-tag">&lt;/head&gt;</span></div>
+            <div class="code-line pl-2"><span class="c-tag">&lt;body&gt;</span></div>
+            <div class="code-line pl-4"><span class="c-tag">&lt;h1</span> <span class="c-attr">class=</span><span class="c-val">"hero"</span><span class="c-tag">&gt;</span></div>
+            <div class="code-line pl-6"><span class="c-text">Hello, World!</span></div>
+            <div class="code-line pl-4"><span class="c-tag">&lt;/h1&gt;</span></div>
+            <div class="code-line pl-2"><span class="c-tag">&lt;/body&gt;</span></div>
+            <div class="code-line"><span class="c-tag">&lt;/html&gt;</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE OVERVIEW GRID -->
+    <section class="modules-overview">
+      <div class="section-header">
+        <div class="section-tag">Workshop Overview</div>
+        <h2>10 Modules to Web Mastery</h2>
+        <p>Each module builds on the previous, taking you from basics to building real projects.</p>
+      </div>
+      <div class="modules-grid">
+        <a href="#module1" class="module-card" data-track="html">
+          <div class="module-card-icon"><i class="fa-brands fa-html5"></i></div>
+          <div class="module-card-num">01</div>
+          <h3>HTML Basics &amp; Structure</h3>
+          <p>Tags, attributes, elements, and document structure</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module2" class="module-card" data-track="html">
+          <div class="module-card-icon"><i class="fa-solid fa-list"></i></div>
+          <div class="module-card-num">02</div>
+          <h3>Lists &amp; Links</h3>
+          <p>Organize content with lists and connect pages with hyperlinks</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module3" class="module-card" data-track="html">
+          <div class="module-card-icon"><i class="fa-solid fa-image"></i></div>
+          <div class="module-card-num">03</div>
+          <h3>Images &amp; Tables</h3>
+          <p>Embed visuals and structure data in tabular format</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module4" class="module-card" data-track="css">
+          <div class="module-card-icon"><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="module-card-num">04</div>
+          <h3>Intro to CSS</h3>
+          <p>Selectors, properties, values, and ways to add CSS</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module5" class="module-card" data-track="css">
+          <div class="module-card-icon"><i class="fa-solid fa-border-all"></i></div>
+          <div class="module-card-num">05</div>
+          <h3>Box Model &amp; Layout</h3>
+          <p>Understand content, padding, border, and margin</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module6" class="module-card" data-track="css">
+          <div class="module-card-icon"><i class="fa-solid fa-font"></i></div>
+          <div class="module-card-num">06</div>
+          <h3>Typography &amp; Text</h3>
+          <p>Style text with fonts, alignment, spacing &amp; decoration</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module7" class="module-card" data-track="bootstrap">
+          <div class="module-card-icon"><i class="fa-brands fa-bootstrap"></i></div>
+          <div class="module-card-num">07</div>
+          <h3>Bootstrap Intro</h3>
+          <p>The 12-column grid system and responsive design</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module8" class="module-card" data-track="bootstrap">
+          <div class="module-card-icon"><i class="fa-solid fa-table-columns"></i></div>
+          <div class="module-card-num">08</div>
+          <h3>Content &amp; Forms</h3>
+          <p>Bootstrap typography, tables, images and form controls</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module9" class="module-card" data-track="bootstrap">
+          <div class="module-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+          <div class="module-card-num">09</div>
+          <h3>Bootstrap Components</h3>
+          <p>Buttons, cards, breadcrumbs, pagination &amp; more</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+        <a href="#module10" class="module-card" data-track="project">
+          <div class="module-card-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="module-card-num">10</div>
+          <h3>Final Project</h3>
+          <p>Build a complete personal blog/portfolio from scratch</p>
+          <div class="module-card-footer"><i class="fa-regular fa-clock"></i> 1 Hour</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 1 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module1">
+      <div class="module-hero" data-track="html">
+        <div class="module-hero-left">
+          <div class="module-track-badge html-badge"><i class="fa-brands fa-html5"></i> HTML</div>
+          <div class="module-number">Module 01</div>
+          <h2>The Foundation — HTML Basics &amp; Structure</h2>
+          <p class="module-desc">Understand the purpose of HTML, its syntax, and how to structure a basic web page.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>By end of this module you will be able to create a valid, structured HTML document with proper tags, attributes, and comments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+
+        <div class="lesson-block">
+          <div class="lesson-header">
+            <span class="lesson-num">1.1</span>
+            <h3>What is HTML?</h3>
+            <span class="lesson-time">10 mins</span>
+          </div>
+          <div class="lesson-content">
+            <p><strong>HTML</strong> (HyperText Markup Language) is the standard markup language for creating web pages. It describes the <em>structure</em> of a web page using elements called <strong>tags</strong>.</p>
+            <div class="info-box">
+              <i class="fa-solid fa-lightbulb"></i>
+              <p>Think of HTML as the <strong>skeleton</strong> of a webpage. CSS adds the skin and clothes, while JavaScript adds behavior and movement.</p>
+            </div>
+            <h4>HTML Document Structure</h4>
+            <p>Every HTML document follows a standard structure:</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-lang">HTML</span>
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre><code><span class="hl-meta">&lt;!DOCTYPE html&gt;</span>  <span class="hl-comment">&lt;!-- Declares the document type --&gt;</span>
+<span class="hl-tag">&lt;html&gt;</span>           <span class="hl-comment">&lt;!-- Root element of an HTML page --&gt;</span>
+<span class="hl-tag">&lt;head&gt;</span>           <span class="hl-comment">&lt;!-- Meta-information about the document --&gt;</span>
+    <span class="hl-tag">&lt;title&gt;</span><span class="hl-text">My First Page</span><span class="hl-tag">&lt;/title&gt;</span> <span class="hl-comment">&lt;!-- Title in browser tab --&gt;</span>
+<span class="hl-tag">&lt;/head&gt;</span>
+<span class="hl-tag">&lt;body&gt;</span>           <span class="hl-comment">&lt;!-- Visible page content --&gt;</span>
+    <span class="hl-tag">&lt;h1&gt;</span><span class="hl-text">Hello, World!</span><span class="hl-tag">&lt;/h1&gt;</span>
+    <span class="hl-tag">&lt;p&gt;</span><span class="hl-text">This is my first paragraph.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+            <div class="anatomy-diagram">
+              <h4>Document Anatomy</h4>
+              <div class="anatomy-grid">
+                <div class="anatomy-item">
+                  <div class="anatomy-tag">&lt;!DOCTYPE html&gt;</div>
+                  <div class="anatomy-desc">Tells browser this is HTML5</div>
+                </div>
+                <div class="anatomy-item">
+                  <div class="anatomy-tag">&lt;html&gt;</div>
+                  <div class="anatomy-desc">Root container for everything</div>
+                </div>
+                <div class="anatomy-item">
+                  <div class="anatomy-tag">&lt;head&gt;</div>
+                  <div class="anatomy-desc">Invisible metadata &amp; links</div>
+                </div>
+                <div class="anatomy-item">
+                  <div class="anatomy-tag">&lt;body&gt;</div>
+                  <div class="anatomy-desc">Visible content goes here</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header">
+            <span class="lesson-num">1.2</span>
+            <h3>Tags, Attributes, and Elements</h3>
+            <span class="lesson-time">20 mins</span>
+          </div>
+          <div class="lesson-content">
+            <div class="concept-cards">
+              <div class="concept-card">
+                <div class="concept-icon tag-icon"><i class="fa-solid fa-tag"></i></div>
+                <h4>Tags</h4>
+                <p>Keywords surrounded by angle brackets. Most come in pairs:</p>
+                <div class="mini-code"><span class="hl-tag">&lt;p&gt;</span> Opening Tag</div>
+                <div class="mini-code"><span class="hl-tag">&lt;/p&gt;</span> Closing Tag</div>
+                <div class="mini-code"><span class="hl-tag">&lt;br /&gt;</span> Self-closing</div>
+              </div>
+              <div class="concept-card">
+                <div class="concept-icon elem-icon"><i class="fa-solid fa-cube"></i></div>
+                <h4>Elements</h4>
+                <p>A complete unit: opening tag + content + closing tag.</p>
+                <div class="mini-code"><span class="hl-tag">&lt;p&gt;</span><span class="hl-text">Hello</span><span class="hl-tag">&lt;/p&gt;</span></div>
+                <p style="font-size:0.85rem;margin-top:0.5rem;color:var(--text-muted)">The entire thing above is one <em>element</em>.</p>
+              </div>
+              <div class="concept-card">
+                <div class="concept-icon attr-icon"><i class="fa-solid fa-sliders"></i></div>
+                <h4>Attributes</h4>
+                <p>Extra info about elements, always in opening tags as name="value" pairs.</p>
+                <div class="mini-code"><span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"url"</span><span class="hl-tag">&gt;</span>Link<span class="hl-tag">&lt;/a&gt;</span></div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-lang">HTML — Attribute Example</span>
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre><code><span class="hl-comment">&lt;!-- Link with href and target attributes --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"https://www.google.com"</span> <span class="hl-attr">target=</span><span class="hl-val">"_blank"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-text">Visit Google</span>
+<span class="hl-tag">&lt;/a&gt;</span>
+
+<span class="hl-comment">&lt;!-- Image with src, alt, width, height --&gt;</span>
+<span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"photo.jpg"</span> <span class="hl-attr">alt=</span><span class="hl-val">"A sunset"</span> <span class="hl-attr">width=</span><span class="hl-val">"400"</span><span class="hl-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header">
+            <span class="lesson-num">1.3</span>
+            <h3>HTML Comments</h3>
+            <span class="lesson-time">10 mins</span>
+          </div>
+          <div class="lesson-content">
+            <p>Comments explain your code. They are <strong>invisible</strong> in the browser but incredibly helpful for developers.</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-lang">HTML</span>
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre><code><span class="hl-comment">&lt;!-- This is a single-line comment --&gt;</span>
+
+<span class="hl-comment">&lt;!--
+  This is a
+  multi-line comment
+--&gt;</span>
+
+<span class="hl-tag">&lt;h1&gt;</span><span class="hl-text">My Heading</span><span class="hl-tag">&lt;/h1&gt;</span> <span class="hl-comment">&lt;!-- Inline comment --&gt;</span></code></pre>
+            </div>
+            <div class="tip-box">
+              <i class="fa-solid fa-star"></i>
+              <strong>Pro Tip:</strong> Use comments to temporarily hide code during debugging without deleting it. Most code editors use <kbd>Ctrl</kbd> + <kbd>/</kbd> to toggle comments.
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-block">
+          <div class="exercise-header">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Hands-on Exercise 1.4</h3>
+            <span class="exercise-time">20 mins</span>
+          </div>
+          <div class="exercise-content">
+            <h4>Task: Create Your First HTML Page</h4>
+            <div class="exercise-steps">
+              <div class="step"><span class="step-num">1</span><p>Create a new file named <code>index.html</code> in a folder.</p></div>
+              <div class="step"><span class="step-num">2</span><p>Add the complete HTML document structure (<code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>).</p></div>
+              <div class="step"><span class="step-num">3</span><p>Set the <code>&lt;title&gt;</code> to <em>"My First Website"</em>.</p></div>
+              <div class="step"><span class="step-num">4</span><p>Add an <code>&lt;h1&gt;</code> with your name and a <code>&lt;p&gt;</code> introducing yourself.</p></div>
+              <div class="step"><span class="step-num">5</span><p>Add at least 2 comments explaining what different parts do.</p></div>
+              <div class="step"><span class="step-num">6</span><p>Open the file in Chrome/Firefox and see your page!</p></div>
+            </div>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-lang">Solution Template</span>
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre><code><span class="hl-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hl-tag">&lt;html</span> <span class="hl-attr">lang=</span><span class="hl-val">"en"</span><span class="hl-tag">&gt;</span>
+<span class="hl-tag">&lt;head&gt;</span>
+    <span class="hl-comment">&lt;!-- Meta info - not visible to users --&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attr">charset=</span><span class="hl-val">"UTF-8"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;title&gt;</span><span class="hl-text">My First Website</span><span class="hl-tag">&lt;/title&gt;</span>
+<span class="hl-tag">&lt;/head&gt;</span>
+<span class="hl-tag">&lt;body&gt;</span>
+    <span class="hl-comment">&lt;!-- Main heading with my name --&gt;</span>
+    <span class="hl-tag">&lt;h1&gt;</span><span class="hl-text">Hi, I'm Riya Sharma</span><span class="hl-tag">&lt;/h1&gt;</span>
+
+    <span class="hl-comment">&lt;!-- Introduction paragraph --&gt;</span>
+    <span class="hl-tag">&lt;p&gt;</span><span class="hl-text">I am a BCA student passionate about web development.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 2 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module2">
+      <div class="module-hero" data-track="html">
+        <div class="module-hero-left">
+          <div class="module-track-badge html-badge"><i class="fa-brands fa-html5"></i> HTML</div>
+          <div class="module-number">Module 02</div>
+          <h2>Structuring Content — Lists &amp; Links</h2>
+          <p class="module-desc">Organize content using lists and connect pages using hyperlinks.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Use unordered, ordered, and definition lists. Create links to external pages, internal pages, and email addresses.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+
+        <div class="lesson-block">
+          <div class="lesson-header">
+            <span class="lesson-num">2.1</span>
+            <h3>HTML Lists</h3>
+            <span class="lesson-time">30 mins</span>
+          </div>
+          <div class="lesson-content">
+            <p>Lists are used to group a set of related items in a meaningful way.</p>
+            <div class="list-demo-grid">
+              <div class="list-demo-item">
+                <h4><span class="tag-pill">&lt;ul&gt;</span> Unordered List</h4>
+                <p>Items displayed with bullet points. Used when order doesn't matter.</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="code-lang">HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i></button></div>
+                  <pre><code><span class="hl-tag">&lt;ul&gt;</span>
+    <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Coffee</span><span class="hl-tag">&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Tea</span><span class="hl-tag">&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Milk</span><span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ul&gt;</span></code></pre>
+                </div>
+                <div class="live-preview">
+                  <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="list-demo-item">
+                <h4><span class="tag-pill">&lt;ol&gt;</span> Ordered List</h4>
+                <p>Items displayed with numbers. Used when order matters.</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="code-lang">HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i></button></div>
+                  <pre><code><span class="hl-tag">&lt;ol&gt;</span>
+    <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">First Step</span><span class="hl-tag">&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Second Step</span><span class="hl-tag">&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Third Step</span><span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ol&gt;</span></code></pre>
+                </div>
+                <div class="live-preview">
+                  <ol>
+                    <li>First Step</li>
+                    <li>Second Step</li>
+                    <li>Third Step</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="list-demo-item">
+                <h4><span class="tag-pill">&lt;dl&gt;</span> Definition List</h4>
+                <p>A list of terms and their descriptions. Great for glossaries.</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="code-lang">HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i></button></div>
+                  <pre><code><span class="hl-tag">&lt;dl&gt;</span>
+  <span class="hl-tag">&lt;dt&gt;</span><span class="hl-text">HTML</span><span class="hl-tag">&lt;/dt&gt;</span>
+  <span class="hl-tag">&lt;dd&gt;</span><span class="hl-text">HyperText Markup Language</span><span class="hl-tag">&lt;/dd&gt;</span>
+  <span class="hl-tag">&lt;dt&gt;</span><span class="hl-text">CSS</span><span class="hl-tag">&lt;/dt&gt;</span>
+  <span class="hl-tag">&lt;dd&gt;</span><span class="hl-text">Cascading Style Sheets</span><span class="hl-tag">&lt;/dd&gt;</span>
+<span class="hl-tag">&lt;/dl&gt;</span></code></pre>
+                </div>
+                <div class="live-preview">
+                  <dl>
+                    <dt><strong>HTML</strong></dt>
+                    <dd>HyperText Markup Language</dd>
+                    <dt><strong>CSS</strong></dt>
+                    <dd>Cascading Style Sheets</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header">
+            <span class="lesson-num">2.2</span>
+            <h3>HTML Links — The Anchor Tag</h3>
+            <span class="lesson-time">20 mins</span>
+          </div>
+          <div class="lesson-content">
+            <p>Links are what make the web "web-like". The <code>&lt;a&gt;</code> (anchor) tag creates hyperlinks. The key attribute is <code>href</code> (HyperText REFerence).</p>
+
+            <div class="link-types-grid">
+              <div class="link-type">
+                <div class="link-type-icon external-icon"><i class="fa-solid fa-globe"></i></div>
+                <h4>External Page</h4>
+                <div class="mini-code"><span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"https://google.com"</span><span class="hl-tag">&gt;</span>Google<span class="hl-tag">&lt;/a&gt;</span></div>
+              </div>
+              <div class="link-type">
+                <div class="link-type-icon internal-icon"><i class="fa-solid fa-file"></i></div>
+                <h4>Internal Page</h4>
+                <div class="mini-code"><span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"about.html"</span><span class="hl-tag">&gt;</span>About Us<span class="hl-tag">&lt;/a&gt;</span></div>
+              </div>
+              <div class="link-type">
+                <div class="link-type-icon email-icon"><i class="fa-solid fa-envelope"></i></div>
+                <h4>Email Address</h4>
+                <div class="mini-code"><span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"mailto:you@mail.com"</span><span class="hl-tag">&gt;</span>Email<span class="hl-tag">&lt;/a&gt;</span></div>
+              </div>
+              <div class="link-type">
+                <div class="link-type-icon newtab-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                <h4>Open in New Tab</h4>
+                <div class="mini-code"><span class="hl-attr">target=</span><span class="hl-val">"_blank"</span></div>
+              </div>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-lang">HTML — All Link Types</span>
+                <button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button>
+              </div>
+              <pre><code><span class="hl-comment">&lt;!-- External link, opens in new tab --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"https://www.google.com"</span> <span class="hl-attr">target=</span><span class="hl-val">"_blank"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-text">Visit Google</span>
+<span class="hl-tag">&lt;/a&gt;</span>
+
+<span class="hl-comment">&lt;!-- Internal link (relative path) --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"about.html"</span><span class="hl-tag">&gt;</span><span class="hl-text">About Us</span><span class="hl-tag">&lt;/a&gt;</span>
+
+<span class="hl-comment">&lt;!-- Email link --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"mailto:contact@example.com"</span><span class="hl-tag">&gt;</span><span class="hl-text">Send Email</span><span class="hl-tag">&lt;/a&gt;</span>
+
+<span class="hl-comment">&lt;!-- Anchor link (jump within page) --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#section2"</span><span class="hl-tag">&gt;</span><span class="hl-text">Go to Section 2</span><span class="hl-tag">&lt;/a&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-block">
+          <div class="exercise-header">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Hands-on Exercise 2.3</h3>
+            <span class="exercise-time">10 mins</span>
+          </div>
+          <div class="exercise-content">
+            <h4>Task: Create a Recipe Page</h4>
+            <div class="exercise-steps">
+              <div class="step"><span class="step-num">1</span><p>Create <code>recipe.html</code> with a complete HTML structure.</p></div>
+              <div class="step"><span class="step-num">2</span><p>Add <code>&lt;h1&gt;</code> for the recipe title (e.g., "Chocolate Chip Cookies").</p></div>
+              <div class="step"><span class="step-num">3</span><p>Add an unordered list <code>&lt;ul&gt;</code> under an <code>&lt;h2&gt;</code> "Ingredients" heading.</p></div>
+              <div class="step"><span class="step-num">4</span><p>Add an ordered list <code>&lt;ol&gt;</code> under an <code>&lt;h2&gt;</code> "Method" heading with at least 4 steps.</p></div>
+              <div class="step"><span class="step-num">5</span><p>Add a link at the bottom: "Visit More Recipes" → <code>https://www.allrecipes.com</code> in a new tab.</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 3 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module3">
+      <div class="module-hero" data-track="html">
+        <div class="module-hero-left">
+          <div class="module-track-badge html-badge"><i class="fa-brands fa-html5"></i> HTML</div>
+          <div class="module-number">Module 03</div>
+          <h2>Visuals &amp; Data — Images &amp; Tables</h2>
+          <p class="module-desc">Add images to a webpage and structure tabular data effectively.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Embed images with proper attributes and build structured data tables with headers, rows, and cells.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">3.1</span><h3>Images — The &lt;img&gt; Tag</h3><span class="lesson-time">25 mins</span></div>
+          <div class="lesson-content">
+            <p>The <code>&lt;img&gt;</code> tag is <strong>self-closing</strong> — it has no content and no closing tag.</p>
+            <div class="attributes-table-wrapper">
+              <table class="attr-table">
+                <thead><tr><th>Attribute</th><th>Purpose</th><th>Example</th></tr></thead>
+                <tbody>
+                  <tr><td><code>src</code></td><td>Source path/URL of the image (required)</td><td><code>src="photo.jpg"</code></td></tr>
+                  <tr><td><code>alt</code></td><td>Alternative text if image fails (required for accessibility)</td><td><code>alt="A sunset"</code></td></tr>
+                  <tr><td><code>width</code></td><td>Width in pixels</td><td><code>width="500"</code></td></tr>
+                  <tr><td><code>height</code></td><td>Height in pixels</td><td><code>height="300"</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-comment">&lt;!-- Local image --&gt;</span>
+<span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"images/sunset.jpg"</span>
+     <span class="hl-attr">alt=</span><span class="hl-val">"A beautiful sunset over mountains"</span>
+     <span class="hl-attr">width=</span><span class="hl-val">"500"</span>
+     <span class="hl-attr">height=</span><span class="hl-val">"300"</span><span class="hl-tag">&gt;</span>
+
+<span class="hl-comment">&lt;!-- Image from URL --&gt;</span>
+<span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"https://via.placeholder.com/300x200"</span>
+     <span class="hl-attr">alt=</span><span class="hl-val">"Placeholder Image"</span><span class="hl-tag">&gt;</span></code></pre>
+            </div>
+            <div class="warning-box">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <p>Always include the <code>alt</code> attribute. It's required for accessibility (screen readers) and helps with SEO. Without it, visually impaired users get no information about the image.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">3.2</span><h3>Tables — Structuring Data</h3><span class="lesson-time">25 mins</span></div>
+          <div class="lesson-content">
+            <div class="table-anatomy">
+              <div class="table-tags-list">
+                <h4>Table Tags</h4>
+                <div class="tag-row"><code>&lt;table&gt;</code><span>The main container</span></div>
+                <div class="tag-row"><code>&lt;thead&gt;</code><span>Table head section</span></div>
+                <div class="tag-row"><code>&lt;tbody&gt;</code><span>Table body section</span></div>
+                <div class="tag-row"><code>&lt;tr&gt;</code><span>Table row</span></div>
+                <div class="tag-row"><code>&lt;th&gt;</code><span>Table header cell (bold, centered)</span></div>
+                <div class="tag-row"><code>&lt;td&gt;</code><span>Table data cell</span></div>
+              </div>
+            </div>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Complete Table</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-tag">&lt;table</span> <span class="hl-attr">border=</span><span class="hl-val">"1"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;thead&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Student ID</span><span class="hl-tag">&lt;/th&gt;</span>
+      <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Name</span><span class="hl-tag">&lt;/th&gt;</span>
+      <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Grade</span><span class="hl-tag">&lt;/th&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;/thead&gt;</span>
+  <span class="hl-tag">&lt;tbody&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">101</span><span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">Alice</span><span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">A</span><span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">102</span><span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">Bob</span><span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">B</span><span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;/tbody&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span></code></pre>
+            </div>
+            <div class="live-preview">
+              <table style="border-collapse:collapse;width:100%">
+                <thead><tr style="background:var(--accent-primary);color:white"><th style="padding:10px;text-align:left;border:1px solid var(--border)">Student ID</th><th style="padding:10px;text-align:left;border:1px solid var(--border)">Name</th><th style="padding:10px;text-align:left;border:1px solid var(--border)">Grade</th></tr></thead>
+                <tbody>
+                  <tr><td style="padding:10px;border:1px solid var(--border)">101</td><td style="padding:10px;border:1px solid var(--border)">Alice</td><td style="padding:10px;border:1px solid var(--border)">A</td></tr>
+                  <tr style="background:var(--surface-2)"><td style="padding:10px;border:1px solid var(--border)">102</td><td style="padding:10px;border:1px solid var(--border)">Bob</td><td style="padding:10px;border:1px solid var(--border)">B</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 4 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module4">
+      <div class="module-hero" data-track="css">
+        <div class="module-hero-left">
+          <div class="module-track-badge css-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+          <div class="module-number">Module 04</div>
+          <h2>Styling Basics — Introduction to CSS</h2>
+          <p class="module-desc">Understand what CSS is, its purpose, and how to apply it to HTML elements.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Write CSS rules using element, class, and ID selectors and apply them via inline, internal, and external stylesheets.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">4.1</span><h3>What is CSS?</h3><span class="lesson-time">15 mins</span></div>
+          <div class="lesson-content">
+            <p><strong>CSS</strong> (Cascading Style Sheets) controls the <em>presentation</em> of HTML documents — colors, fonts, spacing, layout, and more.</p>
+            <div class="html-vs-css">
+              <div class="vs-item html-vs">
+                <i class="fa-brands fa-html5"></i>
+                <h4>HTML</h4>
+                <p>Provides <strong>structure</strong> and meaning (the skeleton)</p>
+              </div>
+              <div class="vs-plus">+</div>
+              <div class="vs-item css-vs">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h4>CSS</h4>
+                <p>Provides <strong>style</strong> and presentation (the clothes)</p>
+              </div>
+              <div class="vs-equals">=</div>
+              <div class="vs-item result-vs">
+                <i class="fa-solid fa-globe"></i>
+                <h4>Website</h4>
+                <p>A beautiful, styled web page!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">4.2</span><h3>3 Ways to Add CSS</h3><span class="lesson-time">15 mins</span></div>
+          <div class="lesson-content">
+            <div class="css-methods-grid">
+              <div class="css-method inline-method">
+                <div class="method-badge">Method 1</div>
+                <h4>Inline CSS</h4>
+                <div class="method-rating">
+                  <span class="rating-dot filled"></span><span class="rating-dot"></span><span class="rating-dot"></span>
+                  <span>Quick &amp; Dirty</span>
+                </div>
+                <div class="code-block sm-code">
+                  <pre><code><span class="hl-tag">&lt;p</span> <span class="hl-attr">style=</span><span class="hl-val">"color:blue"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-text">Blue text</span>
+<span class="hl-tag">&lt;/p&gt;</span></code></pre>
+                </div>
+                <div class="method-verdict bad">✗ Hard to maintain</div>
+              </div>
+
+              <div class="css-method internal-method">
+                <div class="method-badge">Method 2</div>
+                <h4>Internal CSS</h4>
+                <div class="method-rating">
+                  <span class="rating-dot filled"></span><span class="rating-dot filled"></span><span class="rating-dot"></span>
+                  <span>Single Page</span>
+                </div>
+                <div class="code-block sm-code">
+                  <pre><code><span class="hl-tag">&lt;style&gt;</span>
+  <span class="hl-selector">p</span> {
+    <span class="hl-prop">color</span>: <span class="hl-val">blue</span>;
+  }
+<span class="hl-tag">&lt;/style&gt;</span></code></pre>
+                </div>
+                <div class="method-verdict ok">~ Not reusable</div>
+              </div>
+
+              <div class="css-method external-method best-method">
+                <div class="method-badge best-badge">Method 3 ⭐ Best</div>
+                <h4>External CSS</h4>
+                <div class="method-rating">
+                  <span class="rating-dot filled"></span><span class="rating-dot filled"></span><span class="rating-dot filled"></span>
+                  <span>Best Practice!</span>
+                </div>
+                <div class="code-block sm-code">
+                  <pre><code><span class="hl-tag">&lt;link</span>
+  <span class="hl-attr">rel=</span><span class="hl-val">"stylesheet"</span>
+  <span class="hl-attr">href=</span><span class="hl-val">"style.css"</span>
+<span class="hl-tag">&gt;</span></code></pre>
+                </div>
+                <div class="method-verdict good">✓ Reusable across all pages</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">4.3</span><h3>CSS Syntax &amp; Selectors</h3><span class="lesson-time">30 mins</span></div>
+          <div class="lesson-content">
+            <div class="css-syntax-diagram">
+              <div class="syntax-part selector-part">
+                <div class="syntax-label">Selector</div>
+                <div class="syntax-val">h1</div>
+              </div>
+              <div class="syntax-brace">{</div>
+              <div class="syntax-declarations">
+                <div class="syntax-declaration">
+                  <div class="decl-prop">color</div>
+                  <div class="decl-colon">:</div>
+                  <div class="decl-val">navy</div>
+                  <div class="decl-semi">;</div>
+                </div>
+                <div class="syntax-declaration">
+                  <div class="decl-prop">font-size</div>
+                  <div class="decl-colon">:</div>
+                  <div class="decl-val">2rem</div>
+                  <div class="decl-semi">;</div>
+                </div>
+              </div>
+              <div class="syntax-brace">}</div>
+            </div>
+
+            <div class="selectors-showcase">
+              <h4>The Three Core Selectors</h4>
+              <div class="selector-tabs">
+                <button class="selector-tab active" onclick="showSelector(this,'element')">Element</button>
+                <button class="selector-tab" onclick="showSelector(this,'class')">Class</button>
+                <button class="selector-tab" onclick="showSelector(this,'id')">ID</button>
+              </div>
+              <div id="selector-element" class="selector-panel active">
+                <p>Selects <strong>all elements</strong> of a given type. Good for general defaults.</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="code-lang">CSS — Element Selector</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+                  <pre><code><span class="hl-comment">/* Selects ALL h1 tags on the page */</span>
+<span class="hl-selector">h1</span> {
+    <span class="hl-prop">color</span>: <span class="hl-val">green</span>;
+    <span class="hl-prop">font-size</span>: <span class="hl-val">2rem</span>;
+}
+
+<span class="hl-comment">/* Selects ALL paragraphs */</span>
+<span class="hl-selector">p</span> {
+    <span class="hl-prop">line-height</span>: <span class="hl-val">1.6</span>;
+}</code></pre>
+                </div>
+              </div>
+              <div id="selector-class" class="selector-panel">
+                <p>Selects elements with a <strong>specific class</strong>. Classes can be reused on multiple elements. Prefixed with <code>.</code></p>
+                <div class="code-block">
+                  <div class="code-header"><span class="code-lang">HTML + CSS — Class Selector</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+                  <pre><code><span class="hl-comment">&lt;!-- HTML --&gt;</span>
+<span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"highlight"</span><span class="hl-tag">&gt;</span><span class="hl-text">This is highlighted.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;span</span> <span class="hl-attr">class=</span><span class="hl-val">"highlight"</span><span class="hl-tag">&gt;</span><span class="hl-text">This too!</span><span class="hl-tag">&lt;/span&gt;</span>
+
+<span class="hl-comment">/* CSS */</span>
+<span class="hl-selector">.highlight</span> {
+    <span class="hl-prop">background-color</span>: <span class="hl-val">yellow</span>;
+    <span class="hl-prop">font-weight</span>: <span class="hl-val">bold</span>;
+}</code></pre>
+                </div>
+              </div>
+              <div id="selector-id" class="selector-panel">
+                <p>Selects a <strong>single unique element</strong>. IDs must be unique per page. Prefixed with <code>#</code>. Use sparingly.</p>
+                <div class="code-block">
+                  <div class="code-header"><span class="code-lang">HTML + CSS — ID Selector</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+                  <pre><code><span class="hl-comment">&lt;!-- HTML --&gt;</span>
+<span class="hl-tag">&lt;p</span> <span class="hl-attr">id=</span><span class="hl-val">"main-paragraph"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-text">This is the main paragraph.</span>
+<span class="hl-tag">&lt;/p&gt;</span>
+
+<span class="hl-comment">/* CSS */</span>
+<span class="hl-selector">#main-paragraph</span> {
+    <span class="hl-prop">font-weight</span>: <span class="hl-val">bold</span>;
+    <span class="hl-prop">font-size</span>: <span class="hl-val">1.2rem</span>;
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 5 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module5">
+      <div class="module-hero" data-track="css">
+        <div class="module-hero-left">
+          <div class="module-track-badge css-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+          <div class="module-number">Module 05</div>
+          <h2>The Box Model &amp; Layout</h2>
+          <p class="module-desc">Master the CSS Box Model — the foundation of all web layout.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Control spacing around elements using margin, padding, border. Understand how <code>box-sizing</code> affects dimensions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">5.1</span><h3>The CSS Box Model</h3><span class="lesson-time">45 mins</span></div>
+          <div class="lesson-content">
+            <p>Every HTML element is rendered as a <strong>rectangular box</strong>. This box has four layers:</p>
+
+            <div class="box-model-visual">
+              <div class="bm-margin">
+                <div class="bm-label margin-label">MARGIN (transparent)</div>
+                <div class="bm-border">
+                  <div class="bm-label border-label">BORDER</div>
+                  <div class="bm-padding">
+                    <div class="bm-label padding-label">PADDING (transparent)</div>
+                    <div class="bm-content">
+                      CONTENT<br/><small>width × height</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-props-grid">
+              <div class="box-prop-card margin-card">
+                <h4><i class="fa-solid fa-border-none"></i> Margin</h4>
+                <p>Space <em>outside</em> the border. Creates distance between elements.</p>
+                <div class="code-block sm-code"><pre><code><span class="hl-selector">.box</span> {
+  <span class="hl-prop">margin</span>: <span class="hl-val">20px</span>;           <span class="hl-comment">/* all sides */</span>
+  <span class="hl-prop">margin</span>: <span class="hl-val">10px 20px</span>;     <span class="hl-comment">/* top/bottom left/right */</span>
+  <span class="hl-prop">margin</span>: <span class="hl-val">auto</span>;           <span class="hl-comment">/* centers horizontally */</span>
+}</code></pre></div>
+              </div>
+              <div class="box-prop-card border-card">
+                <h4><i class="fa-solid fa-square"></i> Border</h4>
+                <p>The line around padding. Has width, style, and color.</p>
+                <div class="code-block sm-code"><pre><code><span class="hl-selector">.box</span> {
+  <span class="hl-prop">border</span>: <span class="hl-val">2px solid black</span>;
+  <span class="hl-prop">border</span>: <span class="hl-val">3px dashed red</span>;
+  <span class="hl-prop">border-radius</span>: <span class="hl-val">8px</span>; <span class="hl-comment">/* round corners */</span>
+}</code></pre></div>
+              </div>
+              <div class="box-prop-card padding-card">
+                <h4><i class="fa-solid fa-expand"></i> Padding</h4>
+                <p>Space <em>inside</em> the border, between border and content.</p>
+                <div class="code-block sm-code"><pre><code><span class="hl-selector">.box</span> {
+  <span class="hl-prop">padding</span>: <span class="hl-val">20px</span>;       <span class="hl-comment">/* all sides */</span>
+  <span class="hl-prop">padding-top</span>: <span class="hl-val">10px</span>;
+  <span class="hl-prop">padding-left</span>: <span class="hl-val">15px</span>;
+}</code></pre></div>
+              </div>
+              <div class="box-prop-card content-card">
+                <h4><i class="fa-solid fa-align-center"></i> Content</h4>
+                <p>The actual content area. Sized with <code>width</code> and <code>height</code>.</p>
+                <div class="code-block sm-code"><pre><code><span class="hl-selector">.box</span> {
+  <span class="hl-prop">width</span>: <span class="hl-val">300px</span>;
+  <span class="hl-prop">height</span>: <span class="hl-val">200px</span>;
+  <span class="hl-prop">background-color</span>: <span class="hl-val">lightblue</span>;
+}</code></pre></div>
+              </div>
+            </div>
+
+            <div class="pro-tip-block">
+              <div class="pro-tip-header"><i class="fa-solid fa-star"></i> Critical: box-sizing Property</div>
+              <p>By default, <code>width</code> only applies to the content area. Adding padding and border increases the total size unexpectedly. Fix this globally:</p>
+              <div class="code-block">
+                <div class="code-header"><span class="code-lang">CSS — Global Best Practice</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+                <pre><code><span class="hl-comment">/* Add this to the TOP of every stylesheet! */</span>
+<span class="hl-selector">*</span>, <span class="hl-selector">*::before</span>, <span class="hl-selector">*::after</span> {
+    <span class="hl-prop">box-sizing</span>: <span class="hl-val">border-box</span>;
+}
+<span class="hl-comment">/* Now: width = content + padding + border (no surprises!) */</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 6 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module6">
+      <div class="module-hero" data-track="css">
+        <div class="module-hero-left">
+          <div class="module-track-badge css-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+          <div class="module-number">Module 06</div>
+          <h2>Typography &amp; Text Properties</h2>
+          <p class="module-desc">Style text effectively using CSS for better readability and aesthetics.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Control font families, sizes, weights, and text alignment, spacing, and decoration for professional typography.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">6.1</span><h3>Font Properties</h3><span class="lesson-time">30 mins</span></div>
+          <div class="lesson-content">
+            <div class="font-props-grid">
+              <div class="font-demo">
+                <div class="prop-name">font-family</div>
+                <div style="font-family: Georgia, serif; font-size:1.1rem">Georgia, serif</div>
+                <div style="font-family: Arial, sans-serif; font-size:1.1rem">Arial, sans-serif</div>
+                <div style="font-family: 'Courier New', monospace; font-size:1.1rem">Courier New, monospace</div>
+              </div>
+              <div class="font-demo">
+                <div class="prop-name">font-size</div>
+                <div style="font-size:0.75rem">0.75rem — Small</div>
+                <div style="font-size:1rem">1rem — Normal (16px)</div>
+                <div style="font-size:1.5rem">1.5rem — Large</div>
+                <div style="font-size:2rem">2rem — X-Large</div>
+              </div>
+              <div class="font-demo">
+                <div class="prop-name">font-weight</div>
+                <div style="font-weight:300">Weight 300 — Light</div>
+                <div style="font-weight:400">Weight 400 — Normal</div>
+                <div style="font-weight:600">Weight 600 — Semibold</div>
+                <div style="font-weight:800">Weight 800 — Bold</div>
+              </div>
+            </div>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">CSS — Font Properties</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-selector">body</span> {
+    <span class="hl-prop">font-family</span>: <span class="hl-val">Arial, Helvetica, sans-serif</span>;
+    <span class="hl-prop">font-size</span>: <span class="hl-val">16px</span>;
+}
+
+<span class="hl-selector">h1</span> {
+    <span class="hl-prop">font-size</span>: <span class="hl-val">2.5rem</span>;    <span class="hl-comment">/* 40px if root = 16px */</span>
+    <span class="hl-prop">font-weight</span>: <span class="hl-val">700</span>;
+    <span class="hl-prop">font-style</span>: <span class="hl-val">italic</span>;
+    <span class="hl-prop">text-transform</span>: <span class="hl-val">uppercase</span>;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">6.2</span><h3>Text Properties</h3><span class="lesson-time">20 mins</span></div>
+          <div class="lesson-content">
+            <div class="text-props-list">
+              <div class="text-prop"><code>color</code> <span>Sets the text color. Accepts named colors, hex, rgb, hsl.</span></div>
+              <div class="text-prop"><code>text-align</code> <span>Aligns text: <em>left</em>, <em>right</em>, <em>center</em>, <em>justify</em>.</span></div>
+              <div class="text-prop"><code>line-height</code> <span>Space between lines. <em>1.5</em> is the recommended default.</span></div>
+              <div class="text-prop"><code>letter-spacing</code> <span>Space between individual characters.</span></div>
+              <div class="text-prop"><code>text-decoration</code> <span><em>underline</em>, <em>overline</em>, <em>line-through</em>, <em>none</em> (removes link underline).</span></div>
+            </div>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">CSS — Text Properties</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-selector">p</span> {
+    <span class="hl-prop">color</span>: <span class="hl-val">#333333</span>;
+    <span class="hl-prop">text-align</span>: <span class="hl-val">justify</span>;
+    <span class="hl-prop">line-height</span>: <span class="hl-val">1.6</span>;
+    <span class="hl-prop">letter-spacing</span>: <span class="hl-val">0.5px</span>;
+}
+
+<span class="hl-selector">a</span> {
+    <span class="hl-prop">text-decoration</span>: <span class="hl-val">none</span>; <span class="hl-comment">/* Remove underline from links */</span>
+    <span class="hl-prop">color</span>: <span class="hl-val">#0066cc</span>;
+}
+
+<span class="hl-selector">h2</span> {
+    <span class="hl-prop">text-align</span>: <span class="hl-val">center</span>;
+    <span class="hl-prop">letter-spacing</span>: <span class="hl-val">2px</span>;
+    <span class="hl-prop">text-transform</span>: <span class="hl-val">uppercase</span>;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 7 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module7">
+      <div class="module-hero" data-track="bootstrap">
+        <div class="module-hero-left">
+          <div class="module-track-badge bs-badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+          <div class="module-number">Module 07</div>
+          <h2>Introduction to Bootstrap</h2>
+          <p class="module-desc">Set up Bootstrap and build responsive layouts with the 12-column grid system.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Include Bootstrap via CDN, use containers, rows, and columns, and understand responsive breakpoints.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">7.1</span><h3>What is Bootstrap?</h3><span class="lesson-time">15 mins</span></div>
+          <div class="lesson-content">
+            <p>Bootstrap is a free, open-source front-end framework for building <strong>responsive, mobile-first</strong> websites faster. It gives you pre-built CSS and JS components.</p>
+            <div class="bootstrap-benefits">
+              <div class="benefit"><i class="fa-solid fa-mobile-screen-button"></i><h4>Mobile-First</h4><p>Designed to look great on phones first, then scales up</p></div>
+              <div class="benefit"><i class="fa-solid fa-grid-2"></i><h4>Grid System</h4><p>Powerful 12-column grid for complex layouts</p></div>
+              <div class="benefit"><i class="fa-solid fa-puzzle-piece"></i><h4>Components</h4><p>Ready-to-use UI components: buttons, cards, navbars...</p></div>
+              <div class="benefit"><i class="fa-solid fa-bolt"></i><h4>Speed</h4><p>Build beautiful UIs much faster than writing CSS from scratch</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">7.2</span><h3>Including Bootstrap via CDN</h3><span class="lesson-time">15 mins</span></div>
+          <div class="lesson-content">
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Bootstrap CDN Setup (Copy this!)</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hl-tag">&lt;html</span> <span class="hl-attr">lang=</span><span class="hl-val">"en"</span><span class="hl-tag">&gt;</span>
+<span class="hl-tag">&lt;head&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attr">charset=</span><span class="hl-val">"UTF-8"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attr">name=</span><span class="hl-val">"viewport"</span> <span class="hl-attr">content=</span><span class="hl-val">"width=device-width, initial-scale=1"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;title&gt;</span><span class="hl-text">Bootstrap Demo</span><span class="hl-tag">&lt;/title&gt;</span>
+    <span class="hl-comment">&lt;!-- Bootstrap 5 CSS --&gt;</span>
+    <span class="hl-tag">&lt;link</span> <span class="hl-attr">href=</span><span class="hl-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span> <span class="hl-attr">rel=</span><span class="hl-val">"stylesheet"</span><span class="hl-tag">&gt;</span>
+<span class="hl-tag">&lt;/head&gt;</span>
+<span class="hl-tag">&lt;body&gt;</span>
+
+    <span class="hl-tag">&lt;h1&gt;</span><span class="hl-text">Hello, Bootstrap!</span><span class="hl-tag">&lt;/h1&gt;</span>
+
+    <span class="hl-comment">&lt;!-- Bootstrap 5 JS (needed for interactive components) --&gt;</span>
+    <span class="hl-tag">&lt;script</span> <span class="hl-attr">src=</span><span class="hl-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="hl-tag">&gt;&lt;/script&gt;</span>
+<span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">7.3</span><h3>The Grid System</h3><span class="lesson-time">30 mins</span></div>
+          <div class="lesson-content">
+            <p>Bootstrap uses a <strong>12-column grid</strong>. Every layout is broken into 12 equal parts.</p>
+
+            <div class="grid-visual">
+              <div class="grid-label">12 Columns →</div>
+              <div class="grid-row-demo">
+                <div class="grid-col c12">col-12 (full width)</div>
+              </div>
+              <div class="grid-row-demo">
+                <div class="grid-col c6">col-6</div>
+                <div class="grid-col c6">col-6</div>
+              </div>
+              <div class="grid-row-demo">
+                <div class="grid-col c4">col-4</div>
+                <div class="grid-col c4">col-4</div>
+                <div class="grid-col c4">col-4</div>
+              </div>
+              <div class="grid-row-demo">
+                <div class="grid-col c8">col-8 (main)</div>
+                <div class="grid-col c4">col-4 (sidebar)</div>
+              </div>
+            </div>
+
+            <div class="breakpoints-table-wrapper">
+              <h4>Responsive Breakpoints</h4>
+              <table class="attr-table">
+                <thead><tr><th>Class Prefix</th><th>Breakpoint</th><th>Use Case</th></tr></thead>
+                <tbody>
+                  <tr><td><code>col-</code></td><td>&lt; 576px</td><td>Extra small (phones)</td></tr>
+                  <tr><td><code>col-sm-</code></td><td>≥ 576px</td><td>Small (large phones)</td></tr>
+                  <tr><td><code>col-md-</code></td><td>≥ 768px</td><td>Medium (tablets)</td></tr>
+                  <tr><td><code>col-lg-</code></td><td>≥ 992px</td><td>Large (desktops)</td></tr>
+                  <tr><td><code>col-xl-</code></td><td>≥ 1200px</td><td>Extra large (wide screens)</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Grid Examples</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"container"</span><span class="hl-tag">&gt;</span>
+
+  <span class="hl-comment">&lt;!-- 3 equal columns --&gt;</span>
+  <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"row"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"col"</span><span class="hl-tag">&gt;</span><span class="hl-text">Column 1</span><span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"col"</span><span class="hl-tag">&gt;</span><span class="hl-text">Column 2</span><span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"col"</span><span class="hl-tag">&gt;</span><span class="hl-text">Column 3</span><span class="hl-tag">&lt;/div&gt;</span>
+  <span class="hl-tag">&lt;/div&gt;</span>
+
+  <span class="hl-comment">&lt;!-- Main + Sidebar layout --&gt;</span>
+  <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"row"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"col-md-8"</span><span class="hl-tag">&gt;</span><span class="hl-text">Main Content</span><span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"col-md-4"</span><span class="hl-tag">&gt;</span><span class="hl-text">Sidebar</span><span class="hl-tag">&lt;/div&gt;</span>
+  <span class="hl-tag">&lt;/div&gt;</span>
+
+<span class="hl-tag">&lt;/div&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 8 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module8">
+      <div class="module-hero" data-track="bootstrap">
+        <div class="module-hero-left">
+          <div class="module-track-badge bs-badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+          <div class="module-number">Module 08</div>
+          <h2>Bootstrap Content &amp; Typography</h2>
+          <p class="module-desc">Use Bootstrap's built-in classes for headings, text, lists, tables, images and forms.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Style content using Bootstrap utility classes for text, tables, images, and build well-styled forms.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">8.1</span><h3>Bootstrap Typography Classes</h3><span class="lesson-time">20 mins</span></div>
+          <div class="lesson-content">
+            <div class="bs-classes-grid">
+              <div class="bs-class-item"><code>.display-1</code> to <code>.display-6</code> <span>Extra-large headings</span></div>
+              <div class="bs-class-item"><code>.lead</code> <span>Larger, stand-out paragraph text</span></div>
+              <div class="bs-class-item"><code>.text-center</code> <span>Center-align text</span></div>
+              <div class="bs-class-item"><code>.text-uppercase</code> <span>Transform text to uppercase</span></div>
+              <div class="bs-class-item"><code>.fw-bold</code> <span>Font weight bold</span></div>
+              <div class="bs-class-item"><code>.text-muted</code> <span>Light gray secondary text</span></div>
+            </div>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Bootstrap Typography</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-tag">&lt;h1</span> <span class="hl-attr">class=</span><span class="hl-val">"display-1"</span><span class="hl-tag">&gt;</span><span class="hl-text">Giant Title</span><span class="hl-tag">&lt;/h1&gt;</span>
+<span class="hl-tag">&lt;h2</span> <span class="hl-attr">class=</span><span class="hl-val">"display-4 text-center text-uppercase"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-text">Welcome</span>
+<span class="hl-tag">&lt;/h2&gt;</span>
+<span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"lead"</span><span class="hl-tag">&gt;</span><span class="hl-text">This paragraph stands out.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"text-muted fw-bold"</span><span class="hl-tag">&gt;</span><span class="hl-text">Secondary info.</span><span class="hl-tag">&lt;/p&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">8.2</span><h3>Bootstrap Tables &amp; Images</h3><span class="lesson-time">20 mins</span></div>
+          <div class="lesson-content">
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Bootstrap Table</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-comment">&lt;!-- .table-striped alternates row colors --&gt;</span>
+<span class="hl-comment">&lt;!-- .table-hover highlights on mouseover --&gt;</span>
+<span class="hl-tag">&lt;table</span> <span class="hl-attr">class=</span><span class="hl-val">"table table-striped table-bordered table-hover"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;thead</span> <span class="hl-attr">class=</span><span class="hl-val">"table-dark"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;tr&gt;</span>
+            <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">#</span><span class="hl-tag">&lt;/th&gt;</span>
+            <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Name</span><span class="hl-tag">&lt;/th&gt;</span>
+            <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Score</span><span class="hl-tag">&lt;/th&gt;</span>
+        <span class="hl-tag">&lt;/tr&gt;</span>
+    <span class="hl-tag">&lt;/thead&gt;</span>
+    <span class="hl-tag">&lt;tbody&gt;</span> ... <span class="hl-tag">&lt;/tbody&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span>
+
+<span class="hl-comment">&lt;!-- Responsive image --&gt;</span>
+<span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"photo.jpg"</span> <span class="hl-attr">class=</span><span class="hl-val">"img-fluid rounded"</span> <span class="hl-attr">alt=</span><span class="hl-val">"..."</span><span class="hl-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">8.3</span><h3>Bootstrap Forms</h3><span class="lesson-time">20 mins</span></div>
+          <div class="lesson-content">
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Bootstrap Form</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-tag">&lt;form&gt;</span>
+    <span class="hl-comment">&lt;!-- mb-3 = margin-bottom: 1rem --&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"mb-3"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;label</span> <span class="hl-attr">for=</span><span class="hl-val">"email"</span> <span class="hl-attr">class=</span><span class="hl-val">"form-label"</span><span class="hl-tag">&gt;</span><span class="hl-text">Email</span><span class="hl-tag">&lt;/label&gt;</span>
+        <span class="hl-tag">&lt;input</span> <span class="hl-attr">type=</span><span class="hl-val">"email"</span>
+               <span class="hl-attr">class=</span><span class="hl-val">"form-control"</span>
+               <span class="hl-attr">id=</span><span class="hl-val">"email"</span>
+               <span class="hl-attr">placeholder=</span><span class="hl-val">"name@example.com"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"mb-3"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;label</span> <span class="hl-attr">for=</span><span class="hl-val">"password"</span> <span class="hl-attr">class=</span><span class="hl-val">"form-label"</span><span class="hl-tag">&gt;</span><span class="hl-text">Password</span><span class="hl-tag">&lt;/label&gt;</span>
+        <span class="hl-tag">&lt;input</span> <span class="hl-attr">type=</span><span class="hl-val">"password"</span>
+               <span class="hl-attr">class=</span><span class="hl-val">"form-control"</span>
+               <span class="hl-attr">id=</span><span class="hl-val">"password"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;button</span> <span class="hl-attr">type=</span><span class="hl-val">"submit"</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-primary"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-text">Submit</span>
+    <span class="hl-tag">&lt;/button&gt;</span>
+<span class="hl-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 9 -->
+    <!-- ============================================================ -->
+    <section class="module-section" id="module9">
+      <div class="module-hero" data-track="bootstrap">
+        <div class="module-hero-left">
+          <div class="module-track-badge bs-badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+          <div class="module-number">Module 09</div>
+          <h2>Bootstrap Components</h2>
+          <p class="module-desc">Use pre-built Bootstrap UI components: Buttons, Cards, Breadcrumbs, and Pagination.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Intermediate</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Build complete UIs using Bootstrap's component library without writing custom CSS.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">9.1</span><h3>Buttons</h3><span class="lesson-time">15 mins</span></div>
+          <div class="lesson-content">
+            <div class="buttons-showcase">
+              <div class="btn-group-demo">
+                <div class="btn-demo primary">btn-primary</div>
+                <div class="btn-demo secondary">btn-secondary</div>
+                <div class="btn-demo success">btn-success</div>
+                <div class="btn-demo danger">btn-danger</div>
+                <div class="btn-demo warning">btn-warning</div>
+                <div class="btn-demo info">btn-info</div>
+                <div class="btn-demo dark">btn-dark</div>
+              </div>
+            </div>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Bootstrap Buttons</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-comment">&lt;!-- Solid buttons --&gt;</span>
+<span class="hl-tag">&lt;button</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-primary"</span><span class="hl-tag">&gt;</span><span class="hl-text">Primary</span><span class="hl-tag">&lt;/button&gt;</span>
+<span class="hl-tag">&lt;button</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-success btn-lg"</span><span class="hl-tag">&gt;</span><span class="hl-text">Large</span><span class="hl-tag">&lt;/button&gt;</span>
+<span class="hl-tag">&lt;button</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-danger btn-sm"</span><span class="hl-tag">&gt;</span><span class="hl-text">Small</span><span class="hl-tag">&lt;/button&gt;</span>
+
+<span class="hl-comment">&lt;!-- Outline buttons --&gt;</span>
+<span class="hl-tag">&lt;button</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-outline-primary"</span><span class="hl-tag">&gt;</span><span class="hl-text">Outline</span><span class="hl-tag">&lt;/button&gt;</span>
+
+<span class="hl-comment">&lt;!-- Link styled as button --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-dark"</span><span class="hl-tag">&gt;</span><span class="hl-text">Link Button</span><span class="hl-tag">&lt;/a&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">9.2</span><h3>Cards</h3><span class="lesson-time">20 mins</span></div>
+          <div class="lesson-content">
+            <p>Cards are the modern, flexible content container. Perfect for blog posts, products, and profiles.</p>
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Bootstrap Card</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"card"</span> <span class="hl-attr">style=</span><span class="hl-val">"width: 18rem;"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-comment">&lt;!-- Image at top --&gt;</span>
+    <span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"image.jpg"</span> <span class="hl-attr">class=</span><span class="hl-val">"card-img-top"</span> <span class="hl-attr">alt=</span><span class="hl-val">"..."</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"card-body"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;h5</span> <span class="hl-attr">class=</span><span class="hl-val">"card-title"</span><span class="hl-tag">&gt;</span><span class="hl-text">Card Title</span><span class="hl-tag">&lt;/h5&gt;</span>
+        <span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"card-text"</span><span class="hl-tag">&gt;</span>
+            <span class="hl-text">Some quick example text here.</span>
+        <span class="hl-tag">&lt;/p&gt;</span>
+        <span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-primary"</span><span class="hl-tag">&gt;</span>
+            <span class="hl-text">Go Somewhere</span>
+        <span class="hl-tag">&lt;/a&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">9.3</span><h3>Checkboxes, Radios, Breadcrumbs &amp; Pagination</h3><span class="lesson-time">25 mins</span></div>
+          <div class="lesson-content">
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Form Controls</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-comment">&lt;!-- Checkbox --&gt;</span>
+<span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"form-check"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;input</span> <span class="hl-attr">class=</span><span class="hl-val">"form-check-input"</span> <span class="hl-attr">type=</span><span class="hl-val">"checkbox"</span> <span class="hl-attr">id=</span><span class="hl-val">"check1"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;label</span> <span class="hl-attr">class=</span><span class="hl-val">"form-check-label"</span> <span class="hl-attr">for=</span><span class="hl-val">"check1"</span><span class="hl-tag">&gt;</span><span class="hl-text">I agree</span><span class="hl-tag">&lt;/label&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+
+<span class="hl-comment">&lt;!-- Radio buttons --&gt;</span>
+<span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"form-check"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;input</span> <span class="hl-attr">class=</span><span class="hl-val">"form-check-input"</span> <span class="hl-attr">type=</span><span class="hl-val">"radio"</span>
+         <span class="hl-attr">name=</span><span class="hl-val">"gender"</span> <span class="hl-attr">id=</span><span class="hl-val">"male"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;label</span> <span class="hl-attr">class=</span><span class="hl-val">"form-check-label"</span> <span class="hl-attr">for=</span><span class="hl-val">"male"</span><span class="hl-tag">&gt;</span><span class="hl-text">Male</span><span class="hl-tag">&lt;/label&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+
+<span class="hl-comment">&lt;!-- Breadcrumb --&gt;</span>
+<span class="hl-tag">&lt;nav</span> <span class="hl-attr">aria-label=</span><span class="hl-val">"breadcrumb"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;ol</span> <span class="hl-attr">class=</span><span class="hl-val">"breadcrumb"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"breadcrumb-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span><span class="hl-tag">&gt;</span><span class="hl-text">Home</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"breadcrumb-item active"</span><span class="hl-tag">&gt;</span><span class="hl-text">Current Page</span><span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;/ol&gt;</span>
+<span class="hl-tag">&lt;/nav&gt;</span>
+
+<span class="hl-comment">&lt;!-- Pagination --&gt;</span>
+<span class="hl-tag">&lt;ul</span> <span class="hl-attr">class=</span><span class="hl-val">"pagination"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"page-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"page-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span><span class="hl-tag">&gt;</span><span class="hl-text">Previous</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"page-item active"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"page-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span><span class="hl-tag">&gt;</span><span class="hl-text">1</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"page-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"page-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span><span class="hl-tag">&gt;</span><span class="hl-text">2</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"page-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"page-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span><span class="hl-tag">&gt;</span><span class="hl-text">Next</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ul&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODULE 10 — FINAL PROJECT -->
+    <!-- ============================================================ -->
+    <section class="module-section final-module" id="module10">
+      <div class="module-hero" data-track="project">
+        <div class="module-hero-left">
+          <div class="module-track-badge project-badge"><i class="fa-solid fa-rocket"></i> Project</div>
+          <div class="module-number">Module 10</div>
+          <h2>Putting It All Together — Project Day</h2>
+          <p class="module-desc">Build a complete, responsive personal blog/portfolio using everything you've learned.</p>
+          <div class="module-meta">
+            <span><i class="fa-regular fa-clock"></i> 1 Hour</span>
+            <span><i class="fa-solid fa-signal"></i> Capstone</span>
+          </div>
+        </div>
+        <div class="module-hero-right">
+          <div class="objective-card">
+            <div class="objective-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h4>Learning Objective</h4>
+            <p>Synthesize HTML, CSS, and Bootstrap skills to build a fully responsive, multi-section webpage from scratch.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-body">
+        <div class="project-requirements">
+          <h3><i class="fa-solid fa-list-check"></i> Project Requirements Checklist</h3>
+          <div class="req-grid">
+            <div class="req-item"><span class="req-icon"><i class="fa-solid fa-bars"></i></span><div><h4>Header Navbar</h4><p>Bootstrap navbar with brand name and navigation links (Home, About, Blog, Contact)</p></div></div>
+            <div class="req-item"><span class="req-icon"><i class="fa-solid fa-star"></i></span><div><h4>Hero Section</h4><p>Large intro section with <code>.display-</code> heading, <code>.lead</code> paragraph, and CTA button</p></div></div>
+            <div class="req-item"><span class="req-icon"><i class="fa-solid fa-user"></i></span><div><h4>About Section</h4><p>Two-column layout (<code>col-md-8</code> text, <code>col-md-4</code> photo/image)</p></div></div>
+            <div class="req-item"><span class="req-icon"><i class="fa-solid fa-newspaper"></i></span><div><h4>Blog Posts Section</h4><p>3 Bootstrap cards in a responsive <code>col-md-4</code> grid with image, title, text and button</p></div></div>
+            <div class="req-item"><span class="req-icon"><i class="fa-solid fa-envelope"></i></span><div><h4>Contact Form</h4><p>Form with Name, Email, Message textarea, and styled submit button</p></div></div>
+            <div class="req-item"><span class="req-icon"><i class="fa-solid fa-copyright"></i></span><div><h4>Footer</h4><p>Centered copyright text with <code>.text-muted</code> and a background color class</p></div></div>
+          </div>
+        </div>
+
+        <div class="project-steps">
+          <h3><i class="fa-solid fa-stairs"></i> Step-by-Step Build Guide</h3>
+          <div class="build-steps">
+            <div class="build-step">
+              <div class="build-step-num">01</div>
+              <div class="build-step-content">
+                <h4>Setup (5 mins)</h4>
+                <p>Create <code>index.html</code>. Add Bootstrap 5 CDN in <code>&lt;head&gt;</code>. Create and link <code>style.css</code> for custom overrides.</p>
+              </div>
+            </div>
+            <div class="build-step">
+              <div class="build-step-num">02</div>
+              <div class="build-step-content">
+                <h4>Build the Navbar (10 mins)</h4>
+                <p>Use Bootstrap's <code>&lt;nav class="navbar"&gt;</code> component. Customize brand and links. Add <code>navbar-expand-lg</code> for responsiveness.</p>
+              </div>
+            </div>
+            <div class="build-step">
+              <div class="build-step-num">03</div>
+              <div class="build-step-content">
+                <h4>Build Hero Section (10 mins)</h4>
+                <p>Use a <code>.container</code> with centered text. Add <code>.display-4</code> heading, <code>.lead</code> paragraph, and <code>.btn .btn-primary</code> button.</p>
+              </div>
+            </div>
+            <div class="build-step">
+              <div class="build-step-num">04</div>
+              <div class="build-step-content">
+                <h4>About &amp; Blog Sections (15 mins)</h4>
+                <p>Create about section with <code>.row .col-md-8 .col-md-4</code> layout. Then create 3-card blog grid using <code>.row .col-md-4</code>.</p>
+              </div>
+            </div>
+            <div class="build-step">
+              <div class="build-step-num">05</div>
+              <div class="build-step-content">
+                <h4>Contact Form &amp; Footer (15 mins)</h4>
+                <p>Build form with <code>.form-control</code> inputs and labels. Add footer with <code>.bg-dark .text-white .text-center</code> classes.</p>
+              </div>
+            </div>
+            <div class="build-step">
+              <div class="build-step-num">06</div>
+              <div class="build-step-content">
+                <h4>Review &amp; Test (5 mins)</h4>
+                <p>Resize the browser to test responsiveness. Use DevTools (F12) to inspect styles. Check all links and form fields work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-header"><span class="lesson-num">Full Code</span><h3>Complete Project Template</h3><span class="lesson-time">Copy &amp; Customize</span></div>
+          <div class="lesson-content">
+            <div class="code-block">
+              <div class="code-header"><span class="code-lang">HTML — Complete Project Starter</span><button class="copy-btn" onclick="copyCode(this)"><i class="fa-regular fa-copy"></i> Copy</button></div>
+              <pre><code><span class="hl-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hl-tag">&lt;html</span> <span class="hl-attr">lang=</span><span class="hl-val">"en"</span><span class="hl-tag">&gt;</span>
+<span class="hl-tag">&lt;head&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attr">charset=</span><span class="hl-val">"UTF-8"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;meta</span> <span class="hl-attr">name=</span><span class="hl-val">"viewport"</span> <span class="hl-attr">content=</span><span class="hl-val">"width=device-width, initial-scale=1"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;title&gt;</span><span class="hl-text">My Portfolio</span><span class="hl-tag">&lt;/title&gt;</span>
+    <span class="hl-tag">&lt;link</span> <span class="hl-attr">href=</span><span class="hl-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"</span>
+          <span class="hl-attr">rel=</span><span class="hl-val">"stylesheet"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;link</span> <span class="hl-attr">rel=</span><span class="hl-val">"stylesheet"</span> <span class="hl-attr">href=</span><span class="hl-val">"style.css"</span><span class="hl-tag">&gt;</span>
+<span class="hl-tag">&lt;/head&gt;</span>
+<span class="hl-tag">&lt;body&gt;</span>
+
+<span class="hl-comment">&lt;!-- ===== NAVBAR ===== --&gt;</span>
+<span class="hl-tag">&lt;nav</span> <span class="hl-attr">class=</span><span class="hl-val">"navbar navbar-expand-lg navbar-dark bg-dark"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"container"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"navbar-brand"</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span><span class="hl-tag">&gt;</span><span class="hl-text">MyPortfolio</span><span class="hl-tag">&lt;/a&gt;</span>
+    <span class="hl-tag">&lt;ul</span> <span class="hl-attr">class=</span><span class="hl-val">"navbar-nav ms-auto"</span><span class="hl-tag">&gt;</span>
+      <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#home"</span><span class="hl-tag">&gt;</span><span class="hl-text">Home</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#about"</span><span class="hl-tag">&gt;</span><span class="hl-text">About</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#blog"</span><span class="hl-tag">&gt;</span><span class="hl-text">Blog</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="hl-tag">&lt;li</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-item"</span><span class="hl-tag">&gt;&lt;a</span> <span class="hl-attr">class=</span><span class="hl-val">"nav-link"</span> <span class="hl-attr">href=</span><span class="hl-val">"#contact"</span><span class="hl-tag">&gt;</span><span class="hl-text">Contact</span><span class="hl-tag">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;/ul&gt;</span>
+  <span class="hl-tag">&lt;/div&gt;</span>
+<span class="hl-tag">&lt;/nav&gt;</span>
+
+<span class="hl-comment">&lt;!-- ===== HERO ===== --&gt;</span>
+<span class="hl-tag">&lt;section</span> <span class="hl-attr">id=</span><span class="hl-val">"home"</span> <span class="hl-attr">class=</span><span class="hl-val">"py-5 text-center bg-primary text-white"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"container"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;h1</span> <span class="hl-attr">class=</span><span class="hl-val">"display-4"</span><span class="hl-tag">&gt;</span><span class="hl-text">Hi, I'm [Your Name]</span><span class="hl-tag">&lt;/h1&gt;</span>
+    <span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"lead"</span><span class="hl-tag">&gt;</span><span class="hl-text">BCA Student | Aspiring Web Developer</span><span class="hl-tag">&lt;/p&gt;</span>
+    <span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#about"</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-light btn-lg"</span><span class="hl-tag">&gt;</span><span class="hl-text">Learn More</span><span class="hl-tag">&lt;/a&gt;</span>
+  <span class="hl-tag">&lt;/div&gt;</span>
+<span class="hl-tag">&lt;/section&gt;</span>
+
+<span class="hl-comment">&lt;!-- ===== BLOG CARDS ===== --&gt;</span>
+<span class="hl-tag">&lt;section</span> <span class="hl-attr">id=</span><span class="hl-val">"blog"</span> <span class="hl-attr">class=</span><span class="hl-val">"py-5"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"container"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;h2</span> <span class="hl-attr">class=</span><span class="hl-val">"text-center mb-4"</span><span class="hl-tag">&gt;</span><span class="hl-text">My Blog Posts</span><span class="hl-tag">&lt;/h2&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"row"</span><span class="hl-tag">&gt;</span>
+      <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"col-md-4"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"card"</span><span class="hl-tag">&gt;</span>
+          <span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"..."</span> <span class="hl-attr">class=</span><span class="hl-val">"card-img-top"</span> <span class="hl-attr">alt=</span><span class="hl-val">"..."</span><span class="hl-tag">&gt;</span>
+          <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"card-body"</span><span class="hl-tag">&gt;</span>
+            <span class="hl-tag">&lt;h5</span> <span class="hl-attr">class=</span><span class="hl-val">"card-title"</span><span class="hl-tag">&gt;</span><span class="hl-text">Post Title</span><span class="hl-tag">&lt;/h5&gt;</span>
+            <span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"card-text"</span><span class="hl-tag">&gt;</span><span class="hl-text">Short description.</span><span class="hl-tag">&lt;/p&gt;</span>
+            <span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#"</span> <span class="hl-attr">class=</span><span class="hl-val">"btn btn-primary"</span><span class="hl-tag">&gt;</span><span class="hl-text">Read More</span><span class="hl-tag">&lt;/a&gt;</span>
+          <span class="hl-tag">&lt;/div&gt;</span>
+        <span class="hl-tag">&lt;/div&gt;</span>
+      <span class="hl-tag">&lt;/div&gt;</span>
+      <span class="hl-comment">&lt;!-- Repeat col-md-4 for 2 more cards --&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+  <span class="hl-tag">&lt;/div&gt;</span>
+<span class="hl-tag">&lt;/section&gt;</span>
+
+<span class="hl-comment">&lt;!-- ===== FOOTER ===== --&gt;</span>
+<span class="hl-tag">&lt;footer</span> <span class="hl-attr">class=</span><span class="hl-val">"bg-dark text-white text-center py-3"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"mb-0"</span><span class="hl-tag">&gt;</span><span class="hl-text">&amp;copy; 2024 MyPortfolio. All rights reserved.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/footer&gt;</span>
+
+<span class="hl-tag">&lt;script</span> <span class="hl-attr">src=</span><span class="hl-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</span><span class="hl-tag">&gt;&lt;/script&gt;</span>
+<span class="hl-tag">&lt;/body&gt;</span>
+<span class="hl-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="final-tips">
+          <h3><i class="fa-solid fa-lightbulb"></i> Final Tips for BCA Students</h3>
+          <div class="tips-grid">
+            <div class="tip-card"><div class="tip-icon"><i class="fa-solid fa-keyboard"></i></div><h4>Practice Daily</h4><p>Write code every day. Even 30 minutes of coding practice leads to massive improvement over weeks.</p></div>
+            <div class="tip-card"><div class="tip-icon"><i class="fa-solid fa-book-open"></i></div><h4>Read the Docs</h4><p>Make <a href="https://getbootstrap.com" target="_blank">getbootstrap.com</a> and <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a> your best friends.</p></div>
+            <div class="tip-card"><div class="tip-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h4>Use DevTools</h4><p>Press F12 in any browser to inspect elements, see applied styles, and debug layout issues in real-time.</p></div>
+            <div class="tip-card"><div class="tip-icon"><i class="fa-brands fa-github"></i></div><h4>Share on GitHub</h4><p>Upload every project to GitHub. It becomes your portfolio and shows your learning journey to employers.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <i class="fa-solid fa-code"></i>
+          <span>WebDev BCA Workshop</span>
+        </div>
+        <p class="footer-text">A comprehensive 10-hour curriculum crafted for BCA students to master front-end web development.</p>
+        <div class="footer-tracks">
+          <span class="track-tag html-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+          <span class="track-tag css-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span class="track-tag bs-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+        </div>
+        <p class="footer-copy">&copy; 2024 BCA Front-End Workshop. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
